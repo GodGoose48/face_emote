@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hôm nay bạn thế nào?</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <nav class="navbar">
+      <div class="container">
+        <h1>😊 Hôm nay bạn thế nào?</h1>
+        <div class="lang-switch">
+          <button id="langToggle">VN</button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5 col-12">
+          <div id="history">
+            <h3>Lịch sử biểu cảm</h3>
+            <ul id="historyList"></ul>
+          </div>
+        </div>
+        <div class="col-md-7 col-12">
+          <div class="center-column">
+            <div class="video-frame">
+              <video id="video" autoplay muted></video>
+              <canvas id="overlay"></canvas>
+              <div class="emoji-container" id="emojiContainer"></div>
+            </div>
+            <div id="expressionText">Đang nhận diện cảm xúc...</div>
+          </div>
+        </div>
+        <div class="col-md-12 col-12">
+          <div id="musicSuggestion" class="hidden">
+            <h3>️🎧 Gợi ý âm nhạc:</h3>
+            <ul id="musicList"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <h3 id="aboutTitle">Về chúng tôi</h3>
+        <div class="row">
+          <div class="col-lg-8 col-md-7 col-12 mb-4">
+            <div class="about-desc" id="aboutContent">
+              Dự án "FaceFeel AI" là sản phẩm tiểu luận giữa kỳ của học phần <strong>Lập trình Web và Ứng dụng</strong>,
+              thuộc Khoa Công nghệ Thông tin - Trường Đại học Tôn Đức Thắng.<br><br>
+              Mục tiêu của dự án là xây dựng một hệ thống có khả năng <strong>nhận diện cảm xúc khuôn mặt theo thời gian
+                thực</strong>
+              ngay trên trình duyệt, từ đó đưa ra các <strong>gợi ý âm nhạc phù hợp với trạng thái cảm xúc</strong> của
+              người dùng.
+              Ứng dụng sử dụng các thư viện hiện đại như <strong>face-api.js</strong> kết hợp với giao diện trực quan
+              nhằm nâng cao trải nghiệm và tính tương tác.
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-5 col-12">
+            <div class="about-members">
+              <p><strong>Hà Huy Tín</strong><br>MSSV: 523H0184<br>📧 523h0184@student.tdtu.edu.vn</p>
+              <p><strong>Bùi Quang Vinh</strong><br>MSSV: 523H0193<br>📧 523h0193@student.tdtu.edu.vn</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script defer src="script.js"></script>
+</body>
+
+</html>
